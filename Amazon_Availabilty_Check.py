@@ -31,19 +31,16 @@ def check(url):
 def ReadAsin():
 	# Asin Id is the product Id which
 	# needs to be provided by the user
-	Asin = 'B08FC6MR62'
-	url = "http://www.amazon.com/dp/" + Asin
-	print ("Processing: "+url)
-	ans = check(url)
-	arr = [
-		'Only 1 left in stock.',
-		'Only 2 left in stock.',
-		'In stock.']
-	print(ans)
-	if ans in arr:
-		# sending email to user if
-		# in case product available
-		sendemail(ans, Asin)
+	Asin = ['B08FC6MR62','B0787D6SGQ']
+	for i in range(len(Asin)):
+		url = "http://www.amazon.com/dp/" + Asin[i]
+		print ("Processing: " + url)
+		ans = check(url)
+		arr = [
+			'Only 1 left in stock.',
+			'Only 2 left in stock.',
+			'In stock.']
+		print(ans)
 
 # scheduling same code to run multiple
 # times after every 1 minute
