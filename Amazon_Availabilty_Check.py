@@ -32,7 +32,7 @@ def ReadAsin():
 	# Asin Id is the product Id which
 	# needs to be provided by the user
 	Asin = 'B08FC6MR62'
-	url = "http://www.amazon.in/dp/" + Asin
+	url = "http://www.amazon.com/dp/" + Asin
 	print ("Processing: "+url)
 	ans = check(url)
 	arr = [
